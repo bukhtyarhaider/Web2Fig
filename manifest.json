@@ -3,6 +3,10 @@
   "name": "Web2Fig",
   "version": "1.0.0",
   "description": "Capture webpages or individual elements and paste them into Figma.",
+  "author": "Bukhtyar Haider Khan <bukhtyar.haider1@gmail.com>",
+  "developer": {
+    "name": "Bukhtyar Haider Khan"
+  },
   "action": {
     "default_title": "Capture with Web2Fig",
     "default_icon": {
