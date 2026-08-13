@@ -21,9 +21,7 @@
   },
   "permissions": [
     "activeTab",
-    "scripting",
-    "clipboardWrite",
-    "tabs"
+    "scripting"
   ],
   "host_permissions": [
     "<all_urls>"

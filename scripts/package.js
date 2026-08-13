@@ -6,7 +6,8 @@ const { execSync } = require("child_process");
 
 const rootDir = path.join(__dirname, "..");
 const distDir = path.join(rootDir, "dist");
-const zipName = "web2fig-v1.0.0.zip";
+const manifest = JSON.parse(fs.readFileSync(path.join(rootDir, "manifest.json"), "utf8"));
+const zipName = `web2fig-v${manifest.version}.zip`;
 const zipPath = path.join(distDir, zipName);
 
 if (!fs.existsSync(distDir)) {
@@ -25,11 +26,10 @@ const filesToInclude = [
   "assets/icon-16.png",
   "assets/icon-32.png",
   "assets/icon-48.png",
-  "assets/icon-128.png",
-  "README.md"
+  "assets/icon-128.png"
 ];
 
-console.log("Packaging Web2Fig v1.0.0 release archive...");
+console.log(`Packaging Web2Fig v${manifest.version} Chrome Web Store archive...`);
 
 try {
   const cmd = `zip -q "${zipPath}" ${filesToInclude.map((f) => `"${f}"`).join(" ")}`;

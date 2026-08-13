@@ -1,40 +1,38 @@
-# Privacy Policy for Web2Fig
+# Web2Fig Privacy Policy
 
-**Effective Date:** August 14, 2026  
-**Last Updated:** August 14, 2026
+**Effective and last updated:** August 14, 2026  
+**Public policy URL:** `https://bukhtyarhaider.github.io/Web2Fig/privacy.html`
 
-Web2Fig ("we", "our", or "the extension") is committed to respecting and protecting your privacy. This Privacy Policy explains how Web2Fig operates and handles your data.
+Web2Fig has no accounts, analytics, advertising, cloud storage, or developer-operated servers. It does not sell or share user data.
 
-## 1. Information We Do Not Collect
+## What Web2Fig processes
 
-Web2Fig **does not collect, store, transmit, or share any personal data or usage information**.
+Only after the user activates Web2Fig, it processes the selected webpage's DOM structure, displayed text, computed styles, layout data, and visible resources such as images, SVGs, and background assets. This may include personal or sensitive information if it is present on the page the user chooses. Processing is solely necessary to create the Figma-compatible clipboard payload requested by the user.
 
-- **No Personal Identifiers:** We do not collect names, email addresses, IP addresses, browser IDs, or device identifiers.
-- **No Browsing Activity or History:** We do not track, log, or monitor the websites you visit, the URLs you browse, or how long you spend on any webpage.
-- **No Captured Data Uploads:** When you capture a webpage or element using Web2Fig, the DOM tree, CSS styles, images, and text content are serialized entirely in your browser's local memory. No page content is uploaded to external servers or cloud services.
-- **No Analytics or Telemetry:** Web2Fig contains zero tracking pixels, analytics scripts, or telemetry frameworks.
+## Where processing happens
 
-## 2. How Data is Processed
+Processing occurs locally in the browser. Capture data remains in memory only long enough to create the clipboard payload; Web2Fig does not persist it. It does not use extension storage, browser sync, cookies, telemetry, or remote databases.
 
-All operations performed by Web2Fig occur **100% locally** inside your web browser tab:
+## Images and network requests
 
-1. **DOM & Style Serialization:** When initiated by the user, Web2Fig reads the computed styles and layout of the active tab.
-2. **Local Clipboard Encoding:** The serialized layout is encoded into a Figma-compatible format and written directly to your operating system's clipboard (`navigator.clipboard`).
-3. **Cross-Origin Media Bridge:** If a page contains external images or icons hosted on remote CDNs, the extension's background service worker fetches those images locally into data URLs so they appear correctly when pasted in Figma. No image URLs or media data are saved or sent anywhere else.
+To preserve visible cross-origin images and SVGs, Web2Fig may request the same public asset URL directly from its original host after the user starts a capture. That is a browser request to the asset host—not a transfer to Web2Fig or a developer-operated service. Web2Fig does not upload captured page content or assets to a Web2Fig server.
 
-## 3. Storage and Permissions
+## Clipboard
 
-- **Local Storage:** Web2Fig does not store persistent browser storage or cookies.
-- **Permissions:** Web2Fig requests permissions (`activeTab`, `scripting`, `clipboardWrite`, `tabs`, and `<all_urls>`) strictly to perform in-page DOM capture, load cross-origin images for the active capture, and place the result onto your local clipboard.
+When capture completes, Web2Fig writes the Figma-compatible payload to the user's local system clipboard. Clipboard data is governed by the operating system and any application where the user pastes it. Web2Fig does not read that data back or retain it.
 
-## 4. Third-Party Services
+## Permissions
 
-Web2Fig does not integrate with third-party tracking, advertising, analytics, or external API providers.
+| Permission | Why it is needed |
+| --- | --- |
+| `activeTab` | Lets Web2Fig operate only in the tab the user explicitly activates it on. |
+| `scripting` | Lets Web2Fig inject its capture and element-selection UI into that active tab. |
+| `<all_urls>` host access | Lets the extension request cross-origin visual assets required for the user-initiated capture. It is not used for tracking or background browsing. |
 
-## 5. Changes to This Privacy Policy
+## Sharing, sale, and retention
 
-We may update this Privacy Policy from time to time if functionality or regulations change. Any updates will be reflected in the "Last Updated" date above.
+Web2Fig does not collect, sell, share, retain, or use captured content for advertising, profiling, analytics, or any purpose unrelated to the requested capture. No Web2Fig operator can access a capture because Web2Fig receives no copy.
 
-## 6. Contact Us
+## Changes and contact
 
-If you have any questions or feedback regarding this Privacy Policy, please open an issue on our official code repository or contact the extension maintainers.
+If this policy changes, the effective date will be updated above. For questions or privacy requests, open an issue at <https://github.com/bukhtyarhaider/Web2Fig/issues>.

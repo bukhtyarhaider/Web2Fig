@@ -1,45 +1,49 @@
-# Web2Fig (v1.0.0)
+# Web2Fig
 
-Web2Fig captures a rendered webpage or a selected DOM element and puts a Figma-compatible payload on your clipboard. Paste it directly into an open Figma canvas with `⌘V` / `Ctrl+V`.
+Web2Fig captures a rendered webpage or selected DOM element and places a Figma-compatible payload on the clipboard. Paste it into an open Figma canvas using `⌘V` (macOS) or `Ctrl+V` (Windows).
+
+**Public site:** <https://bukhtyarhaider.github.io/Web2Fig/>  
+**Privacy policy:** <https://bukhtyarhaider.github.io/Web2Fig/privacy.html>  
+**Support:** <https://bukhtyarhaider.github.io/Web2Fig/support.html>
 
 ## Features
 
-- **Entire Page & Element Picker**: Capture the whole webpage or select specific components.
-- **Editable Layouts**: Converts HTML DOM trees and computed CSS styles into Figma auto-layout frames, typography, vector paths, and images.
-- **Cross-Origin Media**: Service worker bridge fetches external CDN images, background images, and SVGs.
-- **100% Local & Private**: No data uploaded to servers; processing occurs entirely in-memory and outputs to the clipboard.
+- Capture the entire rendered webpage or pick one DOM element.
+- Preserve the page’s editable layout, text, computed styles, SVGs, and visible image assets where the platform permits.
+- Resolve visible cross-origin media directly from its original host during the user-initiated capture.
+- Process captures locally in the browser with no account, analytics, or Web2Fig cloud service.
 
-## Install Locally (Developer Mode)
+## Install locally (Developer Mode)
 
 1. Open `chrome://extensions` in Google Chrome.
-2. Enable **Developer mode** in the top right.
-3. Click **Load unpacked** and select this `Web2Fig` folder.
-4. Open any webpage, click the Web2Fig toolbar icon, then choose **Capture entire page** or **Pick one element**.
+2. Enable **Developer mode**.
+3. Select **Load unpacked** and choose this `Web2Fig` folder.
+4. Open a regular webpage, click the Web2Fig toolbar icon, and select **Capture entire page** or **Inspect & Pick Element**.
 
-> **Note for local files (`file://`)**: Enable **Allow access to file URLs** in the extension details page in Chrome (`chrome://extensions` → Web2Fig → Details).
+For local `file://` pages, enable **Allow access to file URLs** in Web2Fig’s details on `chrome://extensions`.
 
-## Production Build & Packaging
-
-To generate icons and build the release zip package for Chrome Web Store submission:
+## Release build
 
 ```bash
-# Render icon assets (16x16, 32x32, 48x48, 128x128)
-npm run icons
-
-# Package release archive into dist/web2fig-v1.0.0.zip
-npm run package
-
-# Build all icons and package zip
 npm run build
 ```
 
-## Structure
+This renders the extension icons and creates `dist/web2fig-v<version>.zip`, containing only the files needed by Chrome. Submit that zip in the Chrome Web Store Developer Dashboard.
 
-- `manifest.json` - Manifest V3 extension configuration.
-- `background.js` - Service worker for script injection and cross-origin image resolution bridge.
-- `capture.js` - DOM serialization engine and Figma clipboard payload encoder.
-- `toolbar.js` - Interactive in-page control panel and element selection picker.
-- `assets/` - Generated PNG icons (16, 32, 48, 128px).
-- `CHROMEWEBSTORE.md` - Chrome Web Store listing metadata, category tags, and permission justifications.
-- `PRIVACY_POLICY.md` - Store compliance privacy policy document.
-- `dist/web2fig-v1.0.0.zip` - Release package ready for Chrome Web Store Developer Dashboard.
+## Project structure
+
+- `manifest.json` — Manifest V3 configuration with minimal required permissions.
+- `background.js` — action handler and cross-origin visual-asset bridge.
+- `capture.js` — page serialization and Figma clipboard-payload encoder.
+- `toolbar.js` — in-page capture controls and element picker.
+- `docs/` — GitHub Pages site: homepage, About, Support, Privacy Policy, and Terms.
+- `.github/workflows/deploy-pages.yml` — automated GitHub Pages deployment.
+- `CHROMEWEBSTORE.md` — exact Chrome Web Store copy, permission rationale, and submission checklist.
+
+## Store submission
+
+Read [CHROMEWEBSTORE.md](CHROMEWEBSTORE.md) before uploading. It includes listing copy, URLs, data-practices guidance, and the required store-assets checklist.
+
+## License
+
+[MIT](LICENSE)
