@@ -1,0 +1,20 @@
+{
+  "name": "web2fig",
+  "version": "1.0.0",
+  "description": "Capture webpages or individual elements and paste them into Figma.",
+  "main": "background.js",
+  "scripts": {
+    "icons": "node scripts/render-icon.js",
+    "package": "node scripts/package.js",
+    "build": "npm run icons && npm run package"
+  },
+  "keywords": [
+    "chrome-extension",
+    "figma",
+    "web-capture",
+    "dom-to-figma",
+    "manifest-v3"
+  ],
+  "author": "Web2Fig Team",
+  "license": "MIT"
+}
