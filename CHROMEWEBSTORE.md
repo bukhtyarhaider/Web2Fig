@@ -77,7 +77,7 @@ Web2Fig is created and maintained by **Bukhtyar Haider Khan**. The public develo
 - [ ] Enable GitHub Pages and verify the homepage, support, and privacy URLs load over HTTPS.
 - [ ] Upload `dist/web2fig-v1.0.0.zip` to a draft item in the Chrome Web Store Developer Dashboard.
 - [ ] Upload `assets/icon-128.png` as the store icon.
-- [ ] Add 1–5 current, unedited product screenshots at 1280×800 (or 640×400), with square corners and no padding.
+- [x] Store-ready screenshots prepared in `store-assets/`: `01-capture-entire-page.jpg`, `02-pick-an-element.jpg`, and `03-captured-and-copied.jpg` (each 1280×800 opaque JPEG). Upload them in this order.
 - [ ] Add a 440×280 PNG/JPEG small promotional tile and, if desired, a 1400×560 marquee tile.
 - [ ] Set the support and privacy URLs above, category, language, and detailed description.
 - [ ] Complete the Privacy practices questionnaire and certification based on the packaged build.
