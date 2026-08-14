@@ -1,20 +1,375 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Web2Fig captures webpages and selected elements as editable Figma layers — locally in your browser.">
-  <title>Web2Fig — Web pages, ready for Figma</title><link rel="icon" href="assets/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080a13">
+  <meta name="description" content="Web2Fig converts webpages and selected DOM elements into editable Figma layers locally in your browser. Fast, precise, and 100% private.">
+  
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Web2Fig — Web pages, ready for Figma">
+  <meta property="og:description" content="Turn any live webpage or DOM element into clean, editable Figma vector & text layers in seconds.">
+  <meta property="og:image" content="assets/icon.svg">
+  
+  <title>Web2Fig — Live Webpages to Editable Figma Layers</title>
+  
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="shell nav"><a class="brand" href="index.html"><img src="assets/icon.svg" alt="">Web2Fig</a><nav class="links" aria-label="Primary navigation"><a href="about.html">About</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a class="button ghost" href="https://github.com/bukhtyarhaider/Web2Fig" rel="noreferrer">GitHub</a></nav></header>
+
+  <!-- Sticky Header Navigation -->
+  <header class="nav-header">
+    <div class="shell nav">
+      <a class="brand" href="index.html" aria-label="Web2Fig Home">
+        <div class="brand-icon-wrapper">
+          <img src="assets/icon.svg" alt="Web2Fig logo">
+        </div>
+        <span>Web2Fig</span>
+        <span class="brand-badge">v1.0</span>
+      </a>
+
+      <nav class="links" aria-label="Primary Navigation">
+        <a href="about.html">About</a>
+        <a href="developer.html">Developer</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a class="button ghost sm" href="https://github.com/bukhtyarhaider/Web2Fig" target="_blank" rel="noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" aria-label="Mobile Navigation Menu">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="about.html">About</a>
+    <a href="developer.html">Developer Guide</a>
+    <a href="support.html">Support &amp; FAQ</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a class="button primary" href="https://github.com/bukhtyarhaider/Web2Fig" target="_blank" rel="noreferrer">
+      View on GitHub
+    </a>
+  </div>
+
   <main>
-    <section class="shell hero">
-      <div><p class="eyebrow">Browser to Figma</p><h1>Turn the web into <span class="gradient">editable Figma layers.</span></h1><p class="lede">Capture a live page or a single element, then paste the result into Figma. Layout, text, styles, SVGs, and visual assets stay together — all processed locally in your browser.</p><div class="actions"><a class="button primary" href="#install">Get Web2Fig <span aria-hidden="true">→</span></a><a class="button ghost" href="#how-it-works">See how it works</a></div><div class="trust"><span>Local processing</span><span>No account</span><span>No analytics</span></div></div>
-      <div class="product" aria-label="Preview of the Web2Fig capture interface"><div class="browser"><div class="browser-bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><div class="url">example.com / product</div></div><div class="sample"><div class="sample-title">A page worth keeping<small>Capture the design you can already see.</small></div><div class="sample-card"><b>Build faster</b><p>Reuse what is already real.</p><span class="bar"></span><span class="bar"></span></div><div class="sample-card"><b>Stay editable</b><p>Start with layers, not pixels.</p><span class="bar"></span><span class="bar"></span></div></div></div><div class="capture-panel"><div class="panel-head"><img src="assets/icon.svg" alt="">Web2Fig <span class="ready">Ready</span></div><div class="mini-action"><span class="mini-glyph">▣</span><div><b>Capture entire page</b><span>Convert layout into editable frames</span></div></div><div class="mini-action"><span class="mini-glyph">⌖</span><div><b>Inspect &amp; pick element</b><span>Capture just the part you need</span></div></div></div></div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="shell hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Browser to Figma
+          </div>
+          <h1>Turn the web into <span class="gradient-text">editable Figma layers.</span></h1>
+          <p class="lede">
+            Capture a live webpage or a single DOM element, then paste directly into Figma.
+            Layout structure, text fonts, styles, SVGs, and visual assets stay completely intact — processed locally in your browser.
+          </p>
+          
+          <div class="actions" style="margin-top: 32px;">
+            <a class="button primary" href="#install">
+              Get Web2Fig
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a class="button ghost" href="#how-it-works">See how it works</a>
+          </div>
+
+          <div class="trust-pills">
+            <div class="trust-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              100% Local Processing
+            </div>
+            <div class="trust-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              Zero Accounts
+            </div>
+            <div class="trust-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              Zero Telemetry
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Hero Mockup Simulator -->
+        <div class="product-showcase">
+          <div class="product-glow"></div>
+          <div class="browser-window">
+            <div class="browser-header">
+              <div class="browser-dots">
+                <span class="browser-dot dot-red"></span>
+                <span class="browser-dot dot-yellow"></span>
+                <span class="browser-dot dot-green"></span>
+              </div>
+              <div class="browser-address-bar">
+                <span>https://example.com/ui-components</span>
+                <span style="opacity:0.6;">🔒 SSL</span>
+              </div>
+            </div>
+
+            <div class="browser-content">
+              <!-- Simulator Control Tabs -->
+              <div class="sim-controls">
+                <button class="sim-tab active" data-mode="element">⚡ Interactive Inspector</button>
+                <button class="sim-tab" data-mode="full">▣ Full Page Mode</button>
+              </div>
+
+              <!-- Interactive Webpage Mockup -->
+              <div class="sim-webpage-mock">
+                <div class="sim-element selected" id="mock-header">
+                  <span class="sim-element-label">&lt;Header.HeroSection&gt;</span>
+                  <span class="sim-element-dim">780px × 140px</span>
+                  <span class="sim-badge">FEATURED COMPONENT</span>
+                  <div class="sim-title">Editable Layout &amp; Typography</div>
+                  <div class="sim-text">Hover or click elements to simulate Web2Fig DOM selection.</div>
+                  <div class="sim-btn-sample">Primary Button</div>
+                </div>
+
+                <div class="sim-element" id="mock-card-1">
+                  <span class="sim-element-label">&lt;ArticleCard.VectorSVG&gt;</span>
+                  <span class="sim-element-dim">380px × 95px</span>
+                  <div class="sim-title" style="font-size:14px;">Vector &amp; Image Resolution</div>
+                  <div class="sim-text">SVGs and images are automatically encoded for Figma paste.</div>
+                </div>
+              </div>
+
+              <!-- Floating Extension Action Widget -->
+              <div class="extension-widget">
+                <div class="widget-header">
+                  <div class="widget-brand">
+                    <img src="assets/icon.svg" width="18" height="18" alt="">
+                    Web2Fig Extension
+                  </div>
+                  <div class="widget-status">
+                    <span class="status-dot"></span>
+                    Ready
+                  </div>
+                </div>
+
+                <button class="widget-action-btn" id="sim-capture-trigger">
+                  <div class="action-icon">▣</div>
+                  <div>
+                    <span class="action-title">Capture Entire Page</span>
+                    <span class="action-sub">Convert layout into editable frames</span>
+                  </div>
+                </button>
+
+                <div style="font-size:10px; color:var(--text-dim); text-align:center; margin-top:6px;">
+                  Press <span class="kbd-badge" style="font-size:9px;">⌘V</span> in Figma after capture
+                </div>
+              </div>
+
+              <div class="capture-status-toast"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="section alt"><div class="shell"><p class="eyebrow">Designed for real work</p><h2>Bring fidelity forward — without bringing clutter.</h2><div class="grid"><article class="feature"><div class="feature-icon">▣</div><h3>Entire-page capture</h3><p>Capture the rendered document when you need its layout, typography, and visual hierarchy as a starting point in Figma.</p></article><article class="feature"><div class="feature-icon">⌖</div><h3>Precision picker</h3><p>Hover, select, and capture a specific card, button, section, or DOM element instead of the whole page.</p></article><article class="feature"><div class="feature-icon">✦</div><h3>Assets included</h3><p>Web2Fig resolves visible images, background visuals, SVGs, and styling so your result is useful, not just close.</p></article></div></div></section>
-    <section class="shell section" id="how-it-works"><p class="eyebrow">Three simple steps</p><h2>From live interface to design canvas.</h2><div class="steps"><div class="step"><b>Open Web2Fig</b><p>Click the extension on any regular webpage.</p></div><div class="step"><b>Choose your scope</b><p>Capture the entire page, or select one element with the picker.</p></div><div class="step"><b>Paste into Figma</b><p>Use ⌘V on macOS or Ctrl+V on Windows in an open Figma file.</p></div></div></section>
-    <section class="section alt" id="install"><div class="shell"><p class="eyebrow">Install</p><h2>Web2Fig is preparing for the Chrome Web Store.</h2><p class="section-copy">The public release is currently under review preparation. In the meantime, developers can install the packaged extension from the project repository using Chrome’s “Load unpacked” flow.</p><div class="actions"><a class="button primary" href="https://github.com/bukhtyarhaider/Web2Fig#install-locally-developer-mode" rel="noreferrer">Installation guide</a><a class="button ghost" href="support.html">Need help?</a></div></div></section>
+
+    <!-- Features Showcase -->
+    <section class="section section-alt" id="features">
+      <div class="shell">
+        <div class="section-header">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Designed for Real Work
+          </div>
+          <h2>Bring fidelity forward — without bringing clutter.</h2>
+          <p class="lede">Stop wasting hours recreating existing web UI from scratch or screenshots.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <h3>Entire-Page Capture</h3>
+            <p>Capture the full rendered DOM structure when you need layout hierarchy, spacing, and typography as an instant starting canvas in Figma.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+            </div>
+            <h3>Precision Element Picker</h3>
+            <p>Hover over and isolate specific components — cards, navigation bars, buttons, or hero banners — without capturing surrounding page noise.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>Vector &amp; Visual Assets</h3>
+            <p>Web2Fig resolves embedded SVGs, background visual styles, border colors, and inline images into native Figma vector layers.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>100% Local Privacy</h3>
+            <p>Your web pages are processed entirely in browser memory. No remote server uploads, no analytics tracking, and zero account logins.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+            </div>
+            <h3>Clean Layer Auto-Layout</h3>
+            <p>Translates CSS flexbox and grid layouts into structured auto-layout frames, preserving responsiveness for easy editing.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
+            </div>
+            <h3>Instant Clipboard Paste</h3>
+            <p>Writes directly to system clipboard format so you can hit <strong>⌘V</strong> or <strong>Ctrl+V</strong> right inside any open Figma file.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Walkthrough -->
+    <section class="section" id="how-it-works">
+      <div class="shell">
+        <div class="section-header">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Three Simple Steps
+          </div>
+          <h2>From live browser interface to design canvas.</h2>
+          <p class="lede">Designed to fit seamlessly into your everyday design &amp; development workflow.</p>
+        </div>
+
+        <div class="steps-wrapper">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Open Web2Fig</h3>
+            <p>Click the Web2Fig extension icon in your Chrome toolbar on any webpage you wish to capture.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Select Your Scope</h3>
+            <p>Choose <strong>Capture Entire Page</strong> or launch <strong>Inspect &amp; Pick Element</strong> to hover over precise components.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Paste into Figma</h3>
+            <p>Open Figma and press <span class="kbd-badge">⌘V</span> on macOS or <span class="kbd-badge">Ctrl+V</span> on Windows to paste editable layers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="section section-alt" id="comparison">
+      <div class="shell">
+        <div class="section-header">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Comparison
+          </div>
+          <h2>Why Web2Fig is built different.</h2>
+          <p class="lede">See how Web2Fig compares to standard screenshots and manual vector trace.</p>
+        </div>
+
+        <div class="comparison-container">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th class="highlight">Web2Fig Extension</th>
+                <th>Standard Screenshot</th>
+                <th>Manual Redesign</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Editable Text Layers</strong></td>
+                <td class="highlight check-yes">✓ Full Text &amp; Styles</td>
+                <td class="check-no">✕ Flat Pixels</td>
+                <td class="check-yes">✓ Manual Re-entry</td>
+              </tr>
+              <tr>
+                <td><strong>Speed to Canvas</strong></td>
+                <td class="highlight check-yes">✓ Instant (&lt; 2 Seconds)</td>
+                <td class="check-yes">✓ Instant (&lt; 2 Seconds)</td>
+                <td class="check-no">✕ Hours of manual work</td>
+              </tr>
+              <tr>
+                <td><strong>Native Vector SVGs</strong></td>
+                <td class="highlight check-yes">✓ Clean Vectors</td>
+                <td class="check-no">✕ Raster Image</td>
+                <td class="check-yes">✓ Re-drawn vectors</td>
+              </tr>
+              <tr>
+                <td><strong>Element Picker Scope</strong></td>
+                <td class="highlight check-yes">✓ Isolated DOM nodes</td>
+                <td class="check-no">✕ Manual Crop</td>
+                <td class="check-yes">✓ Manual Selection</td>
+              </tr>
+              <tr>
+                <td><strong>Local Privacy</strong></td>
+                <td class="highlight check-yes">✓ 100% In-Browser</td>
+                <td class="check-yes">✓ Local File</td>
+                <td class="check-yes">✓ Local File</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Installation CTA -->
+    <section class="section" id="install">
+      <div class="shell">
+        <div class="cta-box">
+          <h2>Ready to speed up your Figma workflow?</h2>
+          <p>Web2Fig is open source and currently preparing for official Chrome Web Store launch. You can install the developer package today in less than 60 seconds.</p>
+          <div class="cta-actions">
+            <a class="button primary" href="https://github.com/bukhtyarhaider/Web2Fig#install-locally-developer-mode" target="_blank" rel="noreferrer">
+              Developer Installation Guide
+            </a>
+            <a class="button ghost" href="developer.html">Developer &amp; Contact Info</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="shell footer"><span>© <span data-year>2026</span> Web2Fig · Built by Bukhtyar Haider Khan</span><div class="footer-links"><a href="developer.html">Developer</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></footer><script src="script.js"></script>
-</body></html>
+
+  <!-- Footer -->
+  <footer class="footer-shell">
+    <div class="shell footer-content">
+      <div class="footer-brand-info">
+        <img src="assets/icon.svg" width="20" height="20" alt="">
+        <span>© <span data-year>2026</span> Web2Fig · Built by <strong>Bukhtyar Haider Khan</strong></span>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="developer.html">Developer</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

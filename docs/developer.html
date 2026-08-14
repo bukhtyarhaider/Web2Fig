@@ -1,1 +1,155 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Web2Fig developer and maintainer information."><title>Developer — Web2Fig</title><link rel="icon" href="assets/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"></head><body><header class="shell nav"><a class="brand" href="index.html"><img src="assets/icon.svg" alt="">Web2Fig</a><nav class="links" aria-label="Primary navigation"><a href="about.html">About</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a class="button ghost" href="https://github.com/bukhtyarhaider/Web2Fig" rel="noreferrer">GitHub</a></nav></header><main class="shell"><section class="page-hero"><p class="eyebrow">Developer</p><h1>Made by Bukhtyar Haider Khan.</h1><p class="lede">Web2Fig is independently designed and maintained as a focused, local-first bridge from the web to editable Figma layers.</p></section><article class="prose"><h2>Contact and project links</h2><div class="grid"><article class="info-card"><h3>Source code</h3><p>Read the implementation, release notes, and open issues on <a href="https://github.com/bukhtyarhaider/Web2Fig" rel="noreferrer"><strong>GitHub</strong></a>.</p></article><article class="info-card"><h3>Product support</h3><p>Start with the <a href="support.html"><strong>support guide</strong></a>, then file a safe, reproducible issue if you need help.</p></article><article class="info-card"><h3>Direct contact</h3><p>Email <a href="mailto:bukhtyar.haider1@gmail.com"><strong>bukhtyar.haider1@gmail.com</strong></a> for product or security-sensitive questions.</p></article></div><h2>Maintenance commitment</h2><p>The maintainer is responsible for release quality, Chrome Web Store listing accuracy, permission minimization, privacy-policy updates, and the public support channels. Any behavior change involving permissions, page data, or network requests is reviewed against the published privacy policy before release.</p><h2>Responsible disclosure</h2><p>Do not post a security vulnerability, credentials, or sensitive captured page data in a public issue. Send a short report to the email above with “Web2Fig security” in the subject line so it can be handled privately.</p></article></main><footer class="shell footer"><span>© <span data-year>2026</span> Web2Fig · Built by Bukhtyar Haider Khan</span><div class="footer-links"><a href="developer.html">Developer</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></footer><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080a13">
+  <meta name="description" content="Web2Fig developer guide, source code repository, local development setup, and contact information for Bukhtyar Haider Khan.">
+  <title>Developer — Web2Fig</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="nav-header">
+    <div class="shell nav">
+      <a class="brand" href="index.html" aria-label="Web2Fig Home">
+        <div class="brand-icon-wrapper">
+          <img src="assets/icon.svg" alt="Web2Fig logo">
+        </div>
+        <span>Web2Fig</span>
+      </a>
+
+      <nav class="links" aria-label="Primary Navigation">
+        <a href="about.html">About</a>
+        <a href="developer.html" aria-current="page">Developer</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a class="button ghost sm" href="https://github.com/bukhtyarhaider/Web2Fig" target="_blank" rel="noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </nav>
+
+      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="developer.html" aria-current="page">Developer Guide</a>
+    <a href="support.html">Support &amp; FAQ</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+  </div>
+
+  <main class="shell">
+    <section class="page-hero">
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        Developer Center
+      </div>
+      <h1>Made by Bukhtyar Haider Khan.</h1>
+      <p class="lede">
+        Web2Fig is independently designed and maintained as a focused, local-first bridge from the browser to editable Figma layers.
+      </p>
+    </section>
+
+    <article class="prose-wrapper">
+      <div class="prose-section">
+        <h2>Local Developer Installation</h2>
+        <p>
+          You can test and run Web2Fig locally in Google Chrome using Chrome’s Developer Mode:
+        </p>
+
+        <!-- Copyable Code Box -->
+        <div class="code-card">
+          <div class="code-header">
+            <span>TERMINAL</span>
+            <button class="copy-btn" data-copy="git clone https://github.com/bukhtyarhaider/Web2Fig.git">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
+              Copy Command
+            </button>
+          </div>
+          <pre><code># 1. Clone the repository
+git clone https://github.com/bukhtyarhaider/Web2Fig.git
+
+# 2. Navigate to project folder
+cd Web2Fig</code></pre>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>1. Open Extensions</h3>
+            <p>Navigate to <code>chrome://extensions</code> in your Chrome browser address bar.</p>
+          </div>
+          <div class="info-card">
+            <h3>2. Enable Dev Mode</h3>
+            <p>Toggle <strong>Developer mode</strong> in the top-right corner of the Extensions page.</p>
+          </div>
+          <div class="info-card">
+            <h3>3. Load Unpacked</h3>
+            <p>Click <strong>Load unpacked</strong> and select the Web2Fig project directory.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="prose-section">
+        <h2>Contact &amp; Project Links</h2>
+        <div class="info-grid">
+          <article class="info-card">
+            <h3>Source Code</h3>
+            <p>Read the implementation, release notes, and open issues on <a href="https://github.com/bukhtyarhaider/Web2Fig" target="_blank" rel="noreferrer"><strong>GitHub</strong></a>.</p>
+          </article>
+          <article class="info-card">
+            <h3>Product Support</h3>
+            <p>Start with our <a href="support.html"><strong>support guide</strong></a>, then file a safe, reproducible issue if you need help.</p>
+          </article>
+          <article class="info-card">
+            <h3>Direct Contact</h3>
+            <p>Email <a href="mailto:bukhtyar.haider1@gmail.com"><strong>bukhtyar.haider1@gmail.com</strong></a> for product or security inquiries.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="prose-section">
+        <h2>Maintenance Commitment</h2>
+        <p>
+          The maintainer is responsible for release quality, Chrome Web Store listing accuracy, permission minimization, privacy-policy updates, and managing public support channels. Any behavior change involving permissions or page data is strictly audited against our published privacy policy before release.
+        </p>
+      </div>
+
+      <div class="prose-section">
+        <h2>Responsible Disclosure</h2>
+        <p>
+          Please do not post a security vulnerability, credentials, or sensitive captured page data in a public issue tracker. Send a report directly to <a href="mailto:bukhtyar.haider1@gmail.com">bukhtyar.haider1@gmail.com</a> with <strong>“Web2Fig security”</strong> in the subject line.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer-shell">
+    <div class="shell footer-content">
+      <div>© <span data-year>2026</span> Web2Fig · Built by Bukhtyar Haider Khan</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

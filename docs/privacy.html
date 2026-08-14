@@ -1,1 +1,134 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Web2Fig privacy policy."><title>Privacy Policy — Web2Fig</title><link rel="icon" href="assets/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"></head><body><header class="shell nav"><a class="brand" href="index.html"><img src="assets/icon.svg" alt="">Web2Fig</a><nav class="links" aria-label="Primary navigation"><a href="about.html">About</a><a href="support.html">Support</a><a aria-current="page" href="privacy.html">Privacy</a><a class="button ghost" href="https://github.com/bukhtyarhaider/Web2Fig" rel="noreferrer">GitHub</a></nav></header><main class="shell"><section class="page-hero"><p class="eyebrow">Privacy Policy</p><h1>Your page stays on your device.</h1><p class="lede">Effective August 14, 2026 · Last updated August 14, 2026</p></section><article class="prose"><p class="notice">Web2Fig has no accounts, analytics, advertising, cloud storage, or developer-operated servers. It does not sell or share your data.</p><h2>What Web2Fig processes</h2><p>Only after you activate Web2Fig, it processes the selected webpage’s DOM structure, displayed text, computed styles, layout information, and visible resources such as images, SVGs, and background assets. This content can include personal or sensitive information if it is present on the page you choose. Processing is necessary to create the Figma-compatible clipboard output you requested.</p><h2>Where processing happens</h2><p>Processing occurs locally in the browser. The extension keeps capture data in memory long enough to create the clipboard payload, then does not persist it. Web2Fig does not use browser sync, extension storage, cookies, telemetry, or remote databases.</p><h2>Images and network requests</h2><p>To preserve visible cross-origin images and SVGs, Web2Fig may request the same public asset URL directly from its original host after you start a capture. This is a browser request to that host, not a transfer to Web2Fig or a developer-operated service. Web2Fig does not upload captured page content or assets to any Web2Fig server.</p><h2>Clipboard</h2><p>When capture completes, Web2Fig writes the resulting Figma-compatible payload to your local system clipboard. Clipboard data is controlled by your operating system and the app where you paste it. Web2Fig does not read it back or retain it.</p><h2>Permissions</h2><ul><li><strong>activeTab</strong> lets Web2Fig operate only in the tab you explicitly activate it on.</li><li><strong>scripting</strong> lets Web2Fig inject its capture and element-selection interface into that active tab.</li><li><strong>Host access to all URLs</strong> is used solely to request cross-origin visual assets needed for the capture you initiated. It is not used for tracking or background browsing.</li></ul><h2>Sharing, sale, and retention</h2><p>Web2Fig does not collect, sell, share, retain, or use captured content for advertising, profiling, analytics, or any purpose unrelated to the requested capture. No human at Web2Fig can access your capture because Web2Fig receives no copy.</p><h2>Changes and contact</h2><p>If this policy changes, its effective date will be updated here. For questions or privacy requests, open an issue in the <a href="https://github.com/bukhtyarhaider/Web2Fig/issues" rel="noreferrer"><strong>Web2Fig GitHub repository</strong></a>.</p></article></main><footer class="shell footer"><span>© <span data-year>2026</span> Web2Fig</span><div class="footer-links"><a href="about.html">About</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></footer><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080a13">
+  <meta name="description" content="Web2Fig privacy policy. 100% local processing, zero analytics, zero server uploads.">
+  <title>Privacy Policy — Web2Fig</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="nav-header">
+    <div class="shell nav">
+      <a class="brand" href="index.html" aria-label="Web2Fig Home">
+        <div class="brand-icon-wrapper">
+          <img src="assets/icon.svg" alt="Web2Fig logo">
+        </div>
+        <span>Web2Fig</span>
+      </a>
+
+      <nav class="links" aria-label="Primary Navigation">
+        <a href="about.html">About</a>
+        <a href="developer.html">Developer</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
+        <a class="button ghost sm" href="https://github.com/bukhtyarhaider/Web2Fig" target="_blank" rel="noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </nav>
+
+      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="developer.html">Developer Guide</a>
+    <a href="support.html">Support &amp; FAQ</a>
+    <a href="privacy.html" aria-current="page">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+  </div>
+
+  <main class="shell">
+    <section class="page-hero">
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        Privacy Policy
+      </div>
+      <h1>Your page stays on your device.</h1>
+      <p class="lede">Effective August 14, 2026 · Last updated August 14, 2026</p>
+    </section>
+
+    <article class="prose-wrapper">
+      <div class="notice-box">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div>
+          <strong>Summary Guarantee:</strong> Web2Fig has zero accounts, zero analytics, zero cloud storage, zero advertising tracking, and zero developer-operated servers. Your captures are generated locally and never shared.
+        </div>
+      </div>
+
+      <div class="prose-section">
+        <h2>What Web2Fig Processes</h2>
+        <p>
+          Only when you explicitly activate Web2Fig, it processes the selected webpage’s DOM structure, displayed text, computed CSS styles, layout dimensions, and visible assets (images, SVGs, background styling). This processing is strictly necessary to assemble the Figma clipboard output you requested.
+        </p>
+      </div>
+
+      <div class="prose-section">
+        <h2>Where Processing Happens</h2>
+        <p>
+          100% of processing occurs locally within your Chrome browser. The extension keeps DOM structure in temporary memory only long enough to write the payload to your system clipboard, then discards it immediately. Web2Fig does not use browser sync, local storage persistence, cookies, or remote databases.
+        </p>
+      </div>
+
+      <div class="prose-section">
+        <h2>Images and Network Requests</h2>
+        <p>
+          To preserve visible cross-origin images or SVGs, Web2Fig may request the public asset URL directly from its original host server after you initiate a capture. This is a standard browser HTTP request directly to that host — not a transfer to Web2Fig or any third-party service. Web2Fig never uploads captured content to any external server.
+        </p>
+      </div>
+
+      <div class="prose-section">
+        <h2>System Clipboard</h2>
+        <p>
+          When capture completes, Web2Fig writes the Figma-compatible payload to your local system clipboard. Clipboard memory is governed by your operating system and the Figma app where you paste it. Web2Fig does not read back or retain clipboard data.
+        </p>
+      </div>
+
+      <div class="prose-section">
+        <h2>Permission Minimization</h2>
+        <ul>
+          <li><strong>activeTab:</strong> Allows Web2Fig to operate exclusively in the browser tab you explicitly trigger it on.</li>
+          <li><strong>scripting:</strong> Allows Web2Fig to inject its element-picker UI overlay into that active tab.</li>
+          <li><strong>Host Access (&lt;all_urls&gt;):</strong> Used solely to fetch cross-origin visual images/SVGs required for your active capture. It is never used for background tracking or browsing monitoring.</li>
+        </ul>
+      </div>
+
+      <div class="prose-section">
+        <h2>Policy Changes &amp; Contact</h2>
+        <p>
+          If this privacy policy is updated, the revision date will be reflected at the top of this page. For any questions or privacy inquiries, please open an issue in the official <a href="https://github.com/bukhtyarhaider/Web2Fig/issues" target="_blank" rel="noreferrer">Web2Fig GitHub Repository</a> or contact <a href="mailto:bukhtyar.haider1@gmail.com">Bukhtyar Haider Khan</a>.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer-shell">
+    <div class="shell footer-content">
+      <div>© <span data-year>2026</span> Web2Fig · Built by Bukhtyar Haider Khan</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="developer.html">Developer</a>
+        <a href="support.html">Support</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

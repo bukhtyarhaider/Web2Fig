@@ -1,1 +1,180 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Support for Web2Fig."><title>Support — Web2Fig</title><link rel="icon" href="assets/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"></head><body><header class="shell nav"><a class="brand" href="index.html"><img src="assets/icon.svg" alt="">Web2Fig</a><nav class="links" aria-label="Primary navigation"><a href="about.html">About</a><a aria-current="page" href="support.html">Support</a><a href="privacy.html">Privacy</a><a class="button ghost" href="https://github.com/bukhtyarhaider/Web2Fig" rel="noreferrer">GitHub</a></nav></header><main class="shell"><section class="page-hero"><p class="eyebrow">Support</p><h1>Get from page to Figma without guesswork.</h1><p class="lede">Quick answers, installation instructions, and a direct route to report a reproducible issue.</p></section><article class="prose"><h2>How to use Web2Fig</h2><ol><li>Open a regular webpage in Chrome and click the Web2Fig toolbar icon.</li><li>Choose <strong>Capture entire page</strong>, or choose <strong>Inspect &amp; Pick Element</strong> and click the part of the page you need.</li><li>Open a Figma canvas and paste with <strong>⌘V</strong> (macOS) or <strong>Ctrl+V</strong> (Windows).</li></ol><h2>Frequently asked questions</h2><div class="faq"><details><summary>Why can’t I use Web2Fig on a Chrome settings page?</summary><p>Chrome blocks extensions from running on browser-internal pages such as <code>chrome://</code>, the Chrome Web Store, and some protected pages. Open a normal website instead.</p></details><details><summary>Why are some assets not reproduced exactly?</summary><p>Some sites restrict cross-origin media, use protected content, draw visuals dynamically, or rely on browser-specific effects. Web2Fig captures what the page exposes to the browser and reports embedded image counts after capture.</p></details><details><summary>Can I capture a local file?</summary><p>Yes. In <code>chrome://extensions</code>, open Web2Fig’s details and enable “Allow access to file URLs,” then invoke Web2Fig from your local file.</p></details><details><summary>What should I include in a bug report?</summary><p>Please include the page URL (only if safe to share), the element or page you captured, expected versus actual result, your Chrome version, and any error message. Do not include private page content.</p></details></div><h2>Report an issue</h2><p>Open a <a href="https://github.com/bukhtyarhaider/Web2Fig/issues/new/choose" rel="noreferrer"><strong>GitHub issue</strong></a> with the details above. For product or security-sensitive questions, contact <a href="mailto:bukhtyar.haider1@gmail.com"><strong>Bukhtyar Haider Khan</strong></a> directly and avoid sending private page content.</p></article></main><footer class="shell footer"><span>© <span data-year>2026</span> Web2Fig · Built by Bukhtyar Haider Khan</span><div class="footer-links"><a href="developer.html">Developer</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></footer><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080a13">
+  <meta name="description" content="Support and FAQ for Web2Fig Chrome extension. Learn how to capture web pages and paste editable layers into Figma.">
+  <title>Support — Web2Fig</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="nav-header">
+    <div class="shell nav">
+      <a class="brand" href="index.html" aria-label="Web2Fig Home">
+        <div class="brand-icon-wrapper">
+          <img src="assets/icon.svg" alt="Web2Fig logo">
+        </div>
+        <span>Web2Fig</span>
+      </a>
+
+      <nav class="links" aria-label="Primary Navigation">
+        <a href="about.html">About</a>
+        <a href="developer.html">Developer</a>
+        <a href="support.html" aria-current="page">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a class="button ghost sm" href="https://github.com/bukhtyarhaider/Web2Fig" target="_blank" rel="noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </nav>
+
+      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="developer.html">Developer Guide</a>
+    <a href="support.html" aria-current="page">Support &amp; FAQ</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+  </div>
+
+  <main class="shell">
+    <section class="page-hero">
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        Support &amp; Help Center
+      </div>
+      <h1>Get from page to Figma without guesswork.</h1>
+      <p class="lede">
+        Quick answers, step-by-step usage guide, and a direct path to file reproducible issues.
+      </p>
+    </section>
+
+    <article class="prose-wrapper">
+      <div class="prose-section">
+        <h2>Quick Usage Guide</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>1. Open Webpage</h3>
+            <p>Navigate to any regular website in Chrome and click the Web2Fig extension icon.</p>
+          </div>
+          <div class="info-card">
+            <h3>2. Choose Mode</h3>
+            <p>Select <strong>Capture Entire Page</strong> or use <strong>Inspect &amp; Pick Element</strong> for specific components.</p>
+          </div>
+          <div class="info-card">
+            <h3>3. Paste in Figma</h3>
+            <p>Open Figma canvas and hit <code>⌘V</code> (macOS) or <code>Ctrl+V</code> (Windows).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="prose-section">
+        <h2>Frequently Asked Questions</h2>
+        
+        <!-- FAQ Interactive Search Input -->
+        <div class="faq-search-box">
+          <svg class="faq-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="text" class="faq-search-input" placeholder="Search support topics and FAQs...">
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>Why can’t I use Web2Fig on Chrome internal pages?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq-content">
+              Google Chrome restricts extensions from running content scripts on internal browser pages such as <code>chrome://</code>, <code>chrome-extension://</code>, the Chrome Web Store, or system settings for security reasons. Please open a normal HTTP/HTTPS website to use Web2Fig.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>Why are some cross-origin images or dynamic visuals not reproduced?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq-content">
+              Some websites restrict cross-origin image requests using strict CORS headers, canvas tainting, or DRM protection. Web2Fig resolves all public images, inline SVGs, and computed styles exposed to the browser.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>Can I capture a local HTML file from my computer?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq-content">
+              Yes! Open <code>chrome://extensions</code>, click <strong>Details</strong> on Web2Fig, and toggle on <strong>"Allow access to file URLs"</strong>. Afterwards, you can capture local <code>file://</code> HTML documents.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>Does Web2Fig store or send my page data anywhere?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq-content">
+              No. Web2Fig runs 100% locally in your browser tab. Captured DOM nodes and styles are compiled directly into system memory to generate the clipboard payload, then discarded. Web2Fig has zero telemetry, no accounts, and zero cloud servers.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>What should I include in a bug report?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq-content">
+              Please include the public page URL (if safe to share), element description, expected vs actual output in Figma, your Chrome version, and any console error messages. Do not attach private personal information.
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="prose-section" style="margin-top: 48px;">
+        <h2>Report an Issue</h2>
+        <p>
+          Need further help or found a bug? File a report on our official issue tracker or reach out directly:
+        </p>
+        <div class="actions" style="margin-top: 20px;">
+          <a class="button primary" href="https://github.com/bukhtyarhaider/Web2Fig/issues/new/choose" target="_blank" rel="noreferrer">
+            Open a GitHub Issue
+          </a>
+          <a class="button ghost" href="mailto:bukhtyar.haider1@gmail.com">
+            Email Bukhtyar Haider Khan
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer-shell">
+    <div class="shell footer-content">
+      <div>© <span data-year>2026</span> Web2Fig · Built by Bukhtyar Haider Khan</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="developer.html">Developer</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
