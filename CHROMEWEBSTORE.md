@@ -13,6 +13,9 @@ This file is the reviewed source for the Chrome Web Store dashboard. Do not clai
 | Homepage | `https://bukhtyarhaider.github.io/Web2Fig/` |
 | Support URL | `https://bukhtyarhaider.github.io/Web2Fig/support.html` |
 | Privacy policy URL | `https://bukhtyarhaider.github.io/Web2Fig/privacy.html` |
+| Developer | Bukhtyar Haider Khan |
+| Developer profile | `https://bukhtyarhaider.github.io/Web2Fig/developer.html` |
+| Support email | `bukhtyar.haider1@gmail.com` |
 
 ### Short description (106 / 132 characters)
 
@@ -64,6 +67,10 @@ Complete the dashboard’s privacy questionnaire truthfully for the exact build 
 - Privacy-policy URL: `https://bukhtyarhaider.github.io/Web2Fig/privacy.html`.
 
 The listing, dashboard answers, public policy, and packaged behavior must remain aligned.
+
+## Developer and customer support
+
+Web2Fig is created and maintained by **Bukhtyar Haider Khan**. The public developer profile is available at <https://bukhtyarhaider.github.io/Web2Fig/developer.html>. Users can receive help through the [support page](https://bukhtyarhaider.github.io/Web2Fig/support.html), [GitHub Issues](https://github.com/bukhtyarhaider/Web2Fig/issues), or <bukhtyar.haider1@gmail.com>.
 
 ## Upload checklist
 
